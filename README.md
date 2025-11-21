@@ -1,16 +1,12 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🔮 Oráculo Místico - SaaS de Numerologia e Astrologia (MVP)Aplicação Web completa simulando um funil de vendas de infoproduto, com geração de mapas numerológicos personalizados em PDF e captura de leads.🖥️ Sobre o ProjetoO Oráculo Místico é um MVP (Produto Mínimo Viável) de um SaaS voltado para o nicho esotérico. O objetivo do sistema é oferecer uma experiência imersiva ao usuário, capturar seus dados para contato futuro e entregar valor imediato através de um relatório personalizado gerado em tempo real.O diferencial técnico deste projeto reside na combinação de um design imersivo (Glassmorphism + Paralaxe) com funcionalidades robustas de validação de dados e geração de documentos no front-end.🚀 Funcionalidades PrincipaisInterface Imersiva: Design responsivo com tema "Galáxia", utilizando efeitos de vidro (backdrop-filter) e animações CSS puras.Motor de Cálculo: Algoritmos próprios em JavaScript para calcular:Signo Solar (baseado em dia/mês).Caminho de Vida (Numerologia baseada na soma da data completa).Ano Pessoal (Previsão numerológica para o ciclo atual).Geração de PDF (Client-Side): Conversão do relatório HTML para arquivo .pdf baixável utilizando html2pdf.js, com tratamento de estilos para garantir legibilidade em impressão (fundo claro vs. fundo escuro da tela).Captura de Leads (Firebase): Integração com Firestore Database para salvar automaticamente os dados dos interessados antes do checkout.Validação e Segurança:Máscara automática para WhatsApp.Bloqueio de datas futuras ou inválidas.Feedback visual de erros em tempo real.Simulação de Pagamento: Fluxo de UX demonstrando integração com gateways (como Stripe), incluindo estados de carregamento e sucesso.🛠️ Tecnologias UtilizadasReact.js (Vite): Framework principal para construção da interface reativa.CSS3 (Puro): Estilização avançada sem dependência de frameworks pesados, garantindo performance e controle total do visual "Glassmorphism".Firebase (Firestore): Banco de dados NoSQL para armazenamento de leads em tempo real.html2pdf.js: Biblioteca para renderização e download do dossiê em PDF.Lucide React: Ícones leves e modernos.📂 Estrutura do Projetosrc/
+├── components/   # Componentes visuais (se houver separação futura)
+├── logic.js      # Cérebro da aplicação (Cálculos matemáticos e Astrológicos)
+├── firebase.js   # Configuração e conexão com o Banco de Dados
+├── App.css       # Estilos globais, animações e regras de impressão
+├── App.jsx       # Lógica de interface, rotas virtuais e validação de formulário
+└── main.jsx      # Ponto de entrada da aplicação
+⚡ Como rodar localmenteClone o repositório:git clone [https://github.com/SEU_USUARIO/oraculo-mistico-saas.git](https://github.com/SEU_USUARIO/oraculo-mistico-saas.git)
+Instale as dependências:cd oraculo-mistico-saas
+npm install
+Configure o Firebase:Crie um projeto no Firebase Console.Crie um arquivo src/firebase.js com suas credenciais (veja firebase.example.js se houver).Inicie o servidor:npm run dev
+Acesse: Abra http://localhost:5173 no seu navegador.🎨 Destaque de DesignO projeto utiliza uma técnica de CSS para alternar o visual entre a tela e o PDF. Enquanto a tela exibe um fundo de galáxia escuro com transparências, o PDF é gerado com fundo branco e tipografia de alto contraste para economizar tinta e facilitar a leitura.Desenvolvido por [Seu Nome][Link para seu LinkedIn]
